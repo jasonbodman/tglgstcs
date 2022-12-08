@@ -1,0 +1,68 @@
+.bodyWrapper {
+    width: 100%;
+    display: grid;
+}
+
+.sectionWrapper {
+    width: 100%;
+    display: grid;
+}
+
+.contentWrapper {
+    padding: 0 50px;
+}
+
+.sectionIntro {
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.formWrapper form {
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    width: 70%;
+}
+
+.inputWrapper {
+    padding: 20px;
+}
+
+.formInput, .formTextArea {
+    border: none;
+    border-bottom: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.formTextArea {
+    resize: vertical;
+}
+
+.formInput::placeholder, .formTextArea::placeholder {
+    color: #000000;
+    font-family: 'OpenSans', sans-serif;
+}
+
+.formInput:focus, .formTextArea:focus {
+    outline: none;
+}
+
+.buttonRight {
+    justify-self: end;
+}
+
+.blueButton {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    background: #009BDF;
+    color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 28px;
+    padding: 10px 30px;
+    border: none;
+}

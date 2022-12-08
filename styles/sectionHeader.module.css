@@ -1,0 +1,18 @@
+.sectionHeader {
+    justify-self: start;
+    background-color: black;
+    padding: 5px 20px 5px 70px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.sectionHeader h1 {
+    font-family: 'Avant Garde', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    color: #009BDF;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}

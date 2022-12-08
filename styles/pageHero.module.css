@@ -1,0 +1,55 @@
+.heroWrapper {
+    width: 100%;
+    height: 50vh;
+    max-height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: grid;
+    padding: 50px 100px;
+}
+
+.heroBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(98.69deg, #000000 48.57%, rgba(0, 114, 164, 0.632172) 71.2%, rgba(255, 255, 255, 0) 92.05%);
+    display: grid;
+}
+
+.heroLeft {
+    width: 50%;
+    min-width: 400px;
+    align-self: center;
+    justify-self: start;
+    justify-content: start;
+    text-align: left;
+    padding: 50px;
+}
+
+.pageHeadline {
+    font-family: 'Avant Garde';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #009BDF;
+}
+
+.pageTagline {
+    font-family: 'OpenSans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 60px;
+    color: #FFFFFF;
+
+
+}
+
+.heroHeadlineBlue {
+    color: #009BDF;
+    font-weight: 700;
+}
