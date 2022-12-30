@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
   return {
     paths: paths.map((slug) => ({params: {slug}})),
-    fallback: true,
+    fallback: false,
   }
 }
 
@@ -26,7 +26,10 @@ export async function getStaticProps(context) {
     description,
     tagline,
     title,
-    "image": image{asset->{url}},
+    image{
+      ...,
+      asset->{url}
+    },
     content[] {
       ...,
     }
@@ -53,8 +56,8 @@ const Service = (props) => {
   
   return (
     <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
-      <PageHero hero={props.servicePage?.image.asset.url} title={props.servicePage?.title} tagline={props.servicePage?.tagline} />
-      {/* <div className={styles.pageOverview}>{servicePage.description}</div> */}
+      
+      <PageHero hero={props.servicePage.image} title={props.servicePage.title} tagline={props.servicePage.tagline} />
 
     </Layout>
 
