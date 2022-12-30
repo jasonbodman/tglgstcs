@@ -1,7 +1,7 @@
 .fullWidth {
   width: 100%;
-  max-width: 1900px;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* max-width: 1900px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   margin: 0 auto;
 }
 

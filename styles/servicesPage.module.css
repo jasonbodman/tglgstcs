@@ -68,13 +68,6 @@ a.servicesItemLink {
 @media only screen and (max-width: 1000px) {
     .servicesList {
         grid-template-columns: 1fr;
-        padding: 0 40px 100px;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .servicesList {
         padding: 0 0 100px;
     }
 }
-

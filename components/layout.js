@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-import styles from '../styles/layout.module.css'
+import styles from '../styles/globals.module.css'
 import Navbar from './navbar'
 import Footer from './footer'
 
@@ -17,8 +17,6 @@ export default function Layout({ title, logo, navigation, footerText, phone, ema
         </Head>
         
         <Navbar logo={logo} navigation={navigation} />
-
-        <div className={styles.fullHeight} />
 
         <main className="contentWrapper">
         {children}
