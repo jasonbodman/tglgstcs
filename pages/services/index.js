@@ -1,33 +1,63 @@
 import React from "react"
-import Image from 'next/image'
+import Link from "next/link"
 
 import client from "../../client"
+import {siteSettingsQuery} from '../../lib/siteSettings'
+import imageUrlBuilder from '@sanity/image-url'
+const builder = imageUrlBuilder(client)
+function urlFor(source) {
+  return builder.image(source)
+}
 
+import Layout from '../../components/layout'
 import PageHero from "../../components/pageHero"
-import styles from '../../styles/Home.module.css'
+import ContactForm from "../../components/contactForm"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+import styles from '../../styles/servicesPage.module.css'
+import globals from '../../styles/globals.module.css'
 
 
 export default function Services(props) {
-
+  const serviceList = props.servicesPageList
   return (
     <>
-      <div>
+    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
         <PageHero hero={props.pageHero} title={props.pageTitle} tagline={props.pageSubtitle} />
-        <div className={styles.contentWrapper}>
-          <p>{props.servicesIntro}</p>
+        
+        <div className={globals.contentWrapper}>
+          <p className={globals.sectionIntro}>{props.servicesIntro}</p>
 
-          <div className={styles.serviceList}>
+          <div className={styles.servicesList}>
+            
+            {serviceList.map((item, key) => (
+              <div className={styles.servicesItem} style={{ 
+                backgroundImage: `url(${urlFor(item.image).blur(15)})` }} key={key}>
+                
+                <div className={styles.servicesItemInner} >
+                  <p className={styles.servicesItemTitle}>{item.title}</p>
+                  <p className={styles.servicesItemDescription}>{item.description}</p>
+                  <Link href={`/services/${item.slug}`} className={styles.servicesItemLink}>Learn More <FontAwesomeIcon className={styles.blueLinkArrow} icon={faArrowRight}/></Link>
+                </div>
+              </div>
+            ))}
             
           </div>
+          
         </div>
-      </div>
+
+        <ContactForm />
+
+      </Layout>
     </>
   )
 }
 
 
 export async function getStaticProps() {
-  const query = `*[_type == "services"][0]{
+  const query = `*[_type == "servicesPage"][0]{
     pageTitle,
     "pageHero": pageHero{asset->{url}},
     pageSubtitle,
@@ -35,13 +65,15 @@ export async function getStaticProps() {
     servicesPageList[]-> {
       title,
       "slug": slug.current,
-      tagline,
+      description,
+      "image": image{asset->{url}}
     },
   
   }`
 
-  const qresult = await client.fetch(query)
+  const siteSettings = await client.fetch(siteSettingsQuery)
 
+  const qresult = await client.fetch(query)
   const pageTitle = qresult.pageTitle
   const pageSubtitle = qresult.pageSubtitle
   const pageHero = qresult.pageHero.asset.url
@@ -50,6 +82,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      siteSettings,
       pageTitle,
       pageSubtitle,
       pageHero,

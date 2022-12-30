@@ -1,0 +1,173 @@
+.aboutHero {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.aboutHeroImage {
+    width: 100%;
+}
+
+.aboutIntroWrapper {
+    padding-top: 50px;
+}
+
+.aboutTitle {
+    font-family: 'Avant Garde', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #000000;
+    text-align: center;
+}
+
+.aboutIntro {
+    font-size: 1.3rem;
+    padding: 20px 0 100px;
+}
+
+.teamWrapper {
+    padding-bottom: 100px;
+    width: 100%;
+    display: grid;
+}
+
+.teamContent {
+    display: grid;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+.bioList {
+    width: 80vw;
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 80px;
+    padding-top: 50px;
+}
+
+.bioItem {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 50px;
+}
+
+.bioContent {
+    display: grid;
+    grid-auto-flow: row;
+    align-content: start;
+}
+
+.personName {
+    font-family: 'Avant Garde', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.personTitle {
+    font-family: 'Avant Garde', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.personBio {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.personContact {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 35px;
+    justify-content: end;
+    align-content: center;
+    padding-top: 20px;
+}
+
+.blueIcon {
+    color: #009BDF;
+    font-size: 1.1rem;}
+
+.bioPhoto {
+    width: 100%;
+    max-width: 300px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+}
+
+.bioPhone, .bioEmail {
+    white-space: nowrap;
+}
+
+
+.historyWrapper {
+    width: 100%;
+    display: grid;
+}
+
+.historyContent {
+    padding: 50px 70px 100px;
+}
+
+.historyText {
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.historyParagraph {
+    padding-bottom: 20px;
+}
+
+.historyPhoto {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    float: right;
+    padding: 0 15px 30px 80px;
+    width: 50%;
+    max-width: 600px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .personContact {
+        grid-auto-flow: row;
+        grid-gap: 10px;
+        justify-content: end;
+        align-content: center;
+        text-align: left;
+        justify-content: start;
+
+    }
+
+    .historyPhoto {
+        float: unset;
+        margin: 0 auto;
+        display: block;
+        width: 70%;
+        padding: 0 0 30px 0;
+    }
+}
+
+@media only screen and (max-width: 865px) {
+    .bioPhoto, .bioPhoto img {
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .bioPhoto, .bioPhoto img {
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .bioItem {
+        grid-auto-flow: row;
+        grid-gap: 30px; 
+    }
+}

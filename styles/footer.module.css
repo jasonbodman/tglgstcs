@@ -1,8 +1,8 @@
-.fullFooter {
+.footerWrapper {
     padding: 10px 20px;
 }
 
-.fullWidth {
+.fullFooter {
     width: 100%;
     display: grid;
     grid-auto-flow: column;
@@ -28,6 +28,9 @@
     grid-auto-flow: column;
     width: 100%;
     text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
+
 }
 
 .footerItem {
@@ -36,7 +39,7 @@
     color: #009BDF;
     text-transform: uppercase;
     text-align: right;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-family: 'Avant Garde', 'Open Sans', sans-serif;
 }
 
@@ -46,9 +49,9 @@
 
 .footerContactLine {
     margin: 0;
-    padding: 4px 0;
+    padding: 5px 0;
     text-align: right;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: 'Avant Garde', 'Open Sans', sans-serif;
 }
 
@@ -64,4 +67,40 @@
     justify-self: center;
     text-align: center;
     grid-column: span 2;
+    font-size: .7rem;
+}
+
+@media only screen and (max-width: 750px) {
+    .fullFooter {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    
+    }
+
+    .logo, .footerRight {
+        justify-self: center;
+    }
+
+    .footerRight {
+        justify-self: center;
+        justify-content: center;
+    }
+
+    .footerItem {
+        text-align: center;
+    }
+    
+    .footerLinks {
+        grid-auto-flow: column;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .footerContactLine {
+        text-align: center;
+    }
+
 }

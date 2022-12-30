@@ -1,0 +1,36 @@
+.fullWidth {
+  width: 100%;
+  max-width: 1900px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0 auto;
+}
+
+.bodyWrapper {
+  width: 100%;
+  display: grid;
+}
+
+.contentWrapper {
+  padding: 0 70px;
+}
+
+.sectionWrapper {
+  width: 100%;
+  display: grid;
+}
+
+.sectionIntro {
+  padding: 40px 0;
+  font-size: 1.3rem;
+}
+
+.blueText {
+  color: #009BDF;
+}
+
+@media only screen and (max-width: 650px) {
+  .contentWrapper {
+      padding-left: 35px; 
+      padding-right: 35px;
+  }
+}

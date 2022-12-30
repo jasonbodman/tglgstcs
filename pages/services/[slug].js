@@ -1,4 +1,9 @@
-import client from '../../client'
+import React from "react"
+
+import client from "../../client"
+import Layout from '../../components/layout'
+import {siteSettingsQuery} from '../../lib/siteSettings'
+
 import PageHero from '../../components/pageHero'
 import Hero from '../../components/hero'
 import styles from '../../styles/service.module.css'
@@ -34,26 +39,28 @@ export async function getStaticProps(context) {
     }
   }
 
+  const siteSettings = await client.fetch(siteSettingsQuery)
 
   return {
     props: {
+      siteSettings,
       servicePage
     }
   }
 }
 
-const Post = ({servicePage}) => {
+const Service = (props) => {
   
   return (
-    <div>
-      <PageHero hero={servicePage?.image.asset.url} title={servicePage?.title} tagline={servicePage?.tagline} />
+    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
+      <PageHero hero={props.servicePage?.image.asset.url} title={props.servicePage?.title} tagline={props.servicePage?.tagline} />
       {/* <div className={styles.pageOverview}>{servicePage.description}</div> */}
 
-    </div>
+    </Layout>
 
   )
 }
 
 
 
-export default Post
+export default Service

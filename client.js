@@ -1,9 +1,9 @@
 import sanityClient from '@sanity/client'
 
 export default sanityClient({
-  projectId: 'g518bgoh',
-  dataset: 'production',
-  useCdn: false, // `false` if you want to ensure fresh data
-  apiVersion: '2022-11-14',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
+	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? 'undefined',
+	useCdn: process.env.NODE_ENV === 'false',  // `false` if you want to ensure fresh data
+	apiVersion: process.env.NEXT_PUBLIC_API_VERSION
 })
 

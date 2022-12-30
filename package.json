@@ -15,10 +15,12 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@portabletext/react": "^2.0.0",
     "@sanity/image-url": "^1.0.1",
+    "dotenv": "^16.0.3",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
     "next": "13.0.2",
     "next-sanity": "^2.0.1",
+    "next-sanity-image": "^5.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }
