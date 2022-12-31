@@ -117,7 +117,7 @@
 }
 
 .historyText {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     width: 100%;
 }
 
@@ -161,7 +161,7 @@
 
 @media only screen and (max-width: 720px) {
     .bioPhoto, .bioPhoto img {
-        max-width: 300px;
+        max-width: 250px;
         display: block;
         margin: 0 auto;
     }
@@ -169,5 +169,20 @@
     .bioItem {
         grid-auto-flow: row;
         grid-gap: 30px; 
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .bioList {
+        width: 100%;
+    }
+    
+    .teamContent, .historyContent {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .bioPhoto, .bioPhoto img {
+        max-width: 200px;
     }
 }
