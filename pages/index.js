@@ -117,7 +117,7 @@ export default function Home(props) {
         {props.contactForm == true ? (
           <ContactForm />
         ): (
-          <div />
+          null
         )}
         
 

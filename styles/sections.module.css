@@ -1,0 +1,89 @@
+/* GLOBALS */
+.sectionWrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    padding-bottom: 100px;
+}
+
+/* TEXT SECTION */
+.textWrapper {
+    display: grid;
+    padding: 25px 35px 0;
+}
+
+.textContent {
+    font-size: 1.1rem;
+}
+
+/* ICON LIST */
+.listWrapper {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 350px));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 100px;
+    grid-gap: 20px;
+}
+
+.iconListItem {
+    max-width: 350px;
+    min-width: 120px;
+}
+
+.itemIconContainer {
+    color: #009BDF;
+    background-color: #000000;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.itemIcon{
+    fill: #009BDF;
+    width: 2.8rem;
+    height: auto;
+    text-align: center;
+    padding-bottom: .2rem;
+}
+
+.itemName {
+    font-size: 1.3rem;
+    color: #000000;
+    text-align: center;
+}
+
+.itemNameBlue {
+    color: #009BDF;
+}
+
+/* VALPROP LIST */
+.valpropWrapper {
+    padding: 0 70px;
+}
+
+.full-list {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.listItem {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+    font-size: 1.1rem;
+    padding: 20px 30px;
+    width: 100%;
+}
+
+.itemBullet {
+    padding-right: 15px;
+}
+
+.itemTitle {
+    font-weight: bold;
+}

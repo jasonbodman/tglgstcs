@@ -1,3 +1,7 @@
+.overviewWrapper {
+    display: grid;
+}
+
 .pageOverview {
     font-family: 'OpenSans', sans-serif;
     font-style: normal;
