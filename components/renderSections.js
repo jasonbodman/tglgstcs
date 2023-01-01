@@ -24,12 +24,12 @@ function RenderSections(props) {
 
   return (
     <Fragment>
-      {sections.map((section) => {
+      {sections.map((section, key) => {
         const SectionComponent = resolveSections(section)
         if (!SectionComponent) {
-          return <div>Missing section {section._type}</div>
+          return <div key={key}>Missing section {section._type}</div>
         }
-        return <SectionComponent {...section} key={section._key} />
+        return <SectionComponent {...section} key={key} />
       })}
     </Fragment>
   )
