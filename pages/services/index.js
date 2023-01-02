@@ -24,7 +24,7 @@ export default function Services(props) {
   const serviceList = props.servicesPageList
   return (
     <>
-    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
+    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} favicon={props.siteSettings.favicon.asset.url}navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
         <PageHero hero={props.pageHero} title={props.pageTitle} tagline={props.pageSubtitle} />
         
         <div className={globals.contentWrapper}>
@@ -48,7 +48,7 @@ export default function Services(props) {
           
         </div>
 
-        <ContactForm />
+        {props.contactForm == true ? (<ContactForm />): (null)}
 
       </Layout>
     </>
@@ -59,15 +59,22 @@ export default function Services(props) {
 export async function getStaticProps() {
   const query = `*[_type == "servicesPage"][0]{
     pageTitle,
-    "pageHero": pageHero{asset->{url}},
+    pageHero{
+      ...,
+      asset->{url}
+    },
     pageSubtitle,
     servicesIntro,
     servicesPageList[]-> {
       title,
       "slug": slug.current,
       description,
-      "image": image{asset->{url}}
+      image{
+        ...,
+        asset->{url}
+      }
     },
+    contactForm
   
   }`
 
@@ -76,9 +83,10 @@ export async function getStaticProps() {
   const qresult = await client.fetch(query)
   const pageTitle = qresult.pageTitle
   const pageSubtitle = qresult.pageSubtitle
-  const pageHero = qresult.pageHero.asset.url
+  const pageHero = qresult.pageHero
   const servicesIntro = qresult.servicesIntro
   const servicesPageList = qresult.servicesPageList
+  const contactForm = qresult.contactForm
 
   return {
     props: {
@@ -87,7 +95,8 @@ export async function getStaticProps() {
       pageSubtitle,
       pageHero,
       servicesIntro,
-      servicesPageList
+      servicesPageList,
+      contactForm
     }
   }
 }

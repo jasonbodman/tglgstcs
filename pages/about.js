@@ -43,7 +43,7 @@ export default function About(props) {
   const bioList = props.bioList
   return (
     <>
-    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
+    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} favicon={props.siteSettings.favicon.asset.url}navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
 
     <div className={styles.aboutHero}>
       <img className={styles.aboutHeroImage} src={urlFor(props.pageHero).size(1500,550).url()}/>
@@ -97,12 +97,7 @@ export default function About(props) {
       </div>
     </div>
 
-    {props.contactForm == true ? (
-          <ContactForm />
-        ): (
-          <div />
-        )}
-
+    {props.contactForm == true ? (<ContactForm />): (null)}
 
     </Layout>
 

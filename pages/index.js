@@ -24,7 +24,7 @@ export default function Home(props) {
 
   return (
     <>
-    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
+    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} logo={props.siteSettings.logo.asset.url}navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
       <Hero />
 
       <div className={globals.bodyWrapper}>
@@ -114,11 +114,7 @@ export default function Home(props) {
           </div>      
         </div>
       
-        {props.contactForm == true ? (
-          <ContactForm />
-        ): (
-          null
-        )}
+        {props.contactForm == true ? (<ContactForm />): (null)}
         
 
       </div>
@@ -130,7 +126,10 @@ export default function Home(props) {
 export async function getStaticProps() {
   const query = `
     *[_type == "homepage"] {
-      "aboutImage": aboutBackgroundImage{asset->{url}},
+      "aboutImage": aboutBackgroundImage{
+        ...,
+        asset->{url}
+      },
       aboutWhatWeDo,
       aboutWhoWeAre,
       aboutWhoWeServe,
@@ -140,25 +139,37 @@ export async function getStaticProps() {
         servicesListFull->{
           title,
           description,
-          image{asset->{url}},
+          image{
+            ...,
+            asset->{url}
+          },
           slug
         },
         servicesListThreeUpCenter->{
           title,
           description,
-          image{asset->{url}},
+          image{
+            ...,
+            asset->{url}
+          },
           slug
         },
         servicesListThreeUpLeft->{
           title,
           description,
-          image{asset->{url}},
+          image{
+            ...,
+            asset->{url}
+          },
           slug
         },
         servicesListThreeUpRight->{
           title,
           description,
-          image{asset->{url}},
+          image{
+            ...,
+            asset->{url}
+          },
           slug
         },
       },

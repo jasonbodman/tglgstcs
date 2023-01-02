@@ -8,7 +8,6 @@ import PageHero from '../../components/pageHero'
 import styles from '../../styles/service.module.css'
 import RenderSections from "../../components/renderSections"
 import ContactForm from "../../components/contactForm"
-import IconList from "../../components/sections/iconList"
 
 
 
@@ -59,7 +58,7 @@ export async function getStaticProps(context) {
 const Service = (props) => {
   
   return (
-    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
+    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} favicon={props.siteSettings.favicon.asset.url}navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
       
       <PageHero hero={props.servicePage.image} title={props.servicePage.title} tagline={props.servicePage.tagline} />
       {console.log(props.servicePage.content)}
@@ -70,11 +69,7 @@ const Service = (props) => {
       
       <RenderSections sections={props.servicePage.content}/>
 
-      {props.servicePage.contactForm == true ? (
-          <ContactForm />
-        ): (
-          null
-        )}
+      {props.servicePage.contactForm == true ? (<ContactForm />): (null)}
 
     </Layout>
 

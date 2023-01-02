@@ -4,7 +4,7 @@ import styles from '../styles/globals.module.css'
 import Navbar from './navbar'
 import Footer from './footer'
 
-export default function Layout({ title, logo, navigation, footerText, phone, email, mail, children }) {
+export default function Layout({ title, logo, favicon, navigation, footerText, phone, email, mail, children }) {
 
   return (
     <>
@@ -13,7 +13,7 @@ export default function Layout({ title, logo, navigation, footerText, phone, ema
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>{title}</title>
-          <link rel='icon' href='favicon.ico' key="favicon"/>
+          <link rel='icon' href={favicon} key="favicon"/>
         </Head>
         
         <Navbar logo={logo} navigation={navigation} />
