@@ -14,7 +14,7 @@ const iconList = (props) => {
                 {list.map((item, key) => (
                 <div className={styles.iconListItem} key={key}>
                     <div className={styles.itemIconContainer}>
-                        <svg className={styles.itemIcon} dangerouslySetInnerHTML={{__html: item.icon}} fill={'#009BDF'}/>
+                        <span className={styles.itemIcon} dangerouslySetInnerHTML={{__html: item.icon}} fill={'#009BDF'}/>
                     </div>
                     <div className={styles.itemName}>
                         <Link href={`/services/`}>
