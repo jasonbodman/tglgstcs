@@ -33,7 +33,7 @@ export default function Home(props) {
         </div>
 
         <div className={styles.homeAboutSection}>
-          <div className={styles.homeAboutContent} style={{ backgroundImage: `url(${urlFor(props.aboutImage)})` }}>
+          <div className={styles.homeAboutContent} style={{ backgroundImage: `url(${urlFor(props.aboutImage).blur(7)})` }}>
             <div className={styles.homeAboutContentInner}>
               <div className={styles.homeAboutCol}>
                 <h1 className={styles.homeAboutHeader}>
