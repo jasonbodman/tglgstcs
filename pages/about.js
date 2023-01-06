@@ -109,7 +109,6 @@ export async function getStaticProps() {
   const query = `
     *[_type == "aboutPage"] {
       pageTitle,
-      pageSubtitle,
       pageHero{
         ...,
         asset->{url}
@@ -139,7 +138,6 @@ export async function getStaticProps() {
 
   const qresult = await client.fetch(query)
   const pageTitle = qresult.pageTitle
-  const pageSubtitle = qresult.pageSubtitle
   const pageHero = qresult.pageHero
   const aboutIntro = qresult.aboutIntro
   const bioList = qresult.bioList
@@ -151,7 +149,6 @@ export async function getStaticProps() {
     props: {
       siteSettings,
       pageTitle,
-      pageSubtitle,
       pageHero,
       aboutIntro,
       bioList,

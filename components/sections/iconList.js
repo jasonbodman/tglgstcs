@@ -1,7 +1,4 @@
-import Link from 'next/link'
 import styles from '../../styles/sections.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const iconList = (props) => {
 
@@ -17,9 +14,7 @@ const iconList = (props) => {
                         <span className={styles.itemIcon} dangerouslySetInnerHTML={{__html: item.icon}} fill={'#009BDF'}/>
                     </div>
                     <div className={styles.itemName}>
-                        <Link href={`/services/`}>
-                            <p>{item.item}</p>
-                        </Link>
+                        <p>{item.item}</p>
                     </div>
                 </div>
                 ))}        
