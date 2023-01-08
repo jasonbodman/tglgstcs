@@ -61,11 +61,12 @@ const Service = (props) => {
     <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} favicon={props.siteSettings.favicon.asset.url}navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
       
       <PageHero hero={props.servicePage.image} title={props.servicePage.title} tagline={props.servicePage.tagline} />
-      {console.log(props.servicePage.content)}
 
-      <div className={styles.overviewWrapper}>
-        <p className={styles.pageOverview}>{props.servicePage.description}</p>
-      </div>
+      {props.servicePage.description ? 
+        <div className={styles.overviewWrapper}>
+          <p className={styles.pageOverview}>{props.servicePage.description}</p>
+        </div>
+      : null }
       
       <RenderSections sections={props.servicePage.content}/>
 

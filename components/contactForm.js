@@ -8,7 +8,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const contactForm = () => {
     return (
-      <div className={globals.sectionWrapper}>
+      <div className={globals.sectionWrapper} id='contact'>
         <SectionHeader title={"Let's Chat"} />
         <div className={globals.contentWrapper}>
           <p className={globals.sectionIntro}>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

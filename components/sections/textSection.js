@@ -1,17 +1,51 @@
+import {PortableText} from '@portabletext/react'
+
 import SectionHeader from "../sectionHeader"
 
 import styles from '../../styles/sections.module.css'
 
+const components = {
+    block: {
+        heading: ({children}) => (
+            <h1 className={styles.textHeader}>{children}</h1>
+            ),            
+        normal: ({children}) => <p className={styles.textContent}>{children}</p>
+    },
+    list: {
+        bullet: ({children}) => (
+            <div>
+                <ul className={styles.splitContentList}>
+                {children.map((item, key) => (
+                <div className={styles.splitListItem} key={key}>
+                    <div className={styles.splitItemBullet}>
+                <FontAwesomeIcon icon={faSquareCaretRight} style={{color: '#009BDF'}}/>
+                </div>
+
+                <div className={styles.splitItemContent}>
+                {item}
+                </div>
+
+                </div>
+                ))}
+                </ul>
+            </div>
+            
+        ),
+    }
+}
+
 const textSection = (props) => {
-    const {heading, content} = props
+    const {heading, sectionAlignment, content} = props
     
     return (
         <div className={styles.sectionWrapper}>
 
-            {heading ? <SectionHeader title={heading} /> : null}
+            <div className={styles.sectionHeaderWrapper}>
+                {heading ? <SectionHeader title={heading} /> : null}
+            </div>
 
-            <div className={styles.textWrapper}>
-                <p className={styles.textContent}>{content}</p>
+            <div className={styles.textWrapper} style={{textAlign: sectionAlignment}}>
+                <PortableText value={content} components={components}/>
             </div>
         </div>
 

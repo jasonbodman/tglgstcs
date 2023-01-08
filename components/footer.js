@@ -2,6 +2,7 @@ import styles from '../styles/footer.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import {urlFor} from '../lib/imageBuilder'
 import {phoneNumberBuilder} from '../lib/phoneNumber'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +17,7 @@ function Footer({logo, footerText, phone, email, mail}) {
             <div className={styles.fullFooter}>
                 <div className={styles.logo}>
                     <Link href="/">
-                        <Image className={styles.footerLogo} src={logo} width={275} height={110} />
+                        <Image className={styles.footerLogo} src={urlFor(logo).url()} width={275} height={110} />
                     </Link>
                 </div>
 

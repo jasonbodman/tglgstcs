@@ -15,12 +15,9 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import client from "../client"
 import Layout from '../components/layout'
 import {siteSettingsQuery} from '../lib/siteSettings'
-import imageUrlBuilder from '@sanity/image-url'
-const builder = imageUrlBuilder(client)
-function urlFor(source) {
-  return builder.image(source)
-  
-}
+
+import {urlFor} from '../lib/imageBuilder'
+
 
 function toPlainText(blocks = []) {
   return blocks

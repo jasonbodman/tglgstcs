@@ -10,7 +10,10 @@ const valpropList = (props) => {
 
     return (
       <div className={styles.sectionWrapper}>
-        {heading ? <SectionHeader title={heading} /> : null}
+
+        <div className={styles.sectionHeaderWrapper}>
+            {heading ? <SectionHeader title={heading} /> : null}
+        </div>
 
         <div className={styles.valpropWrapper}>
 

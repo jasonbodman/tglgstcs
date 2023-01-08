@@ -1,15 +1,21 @@
 import styles from '../../styles/sections.module.css'
 
+import SectionHeader from "../sectionHeader"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareCaretRight } from '@fortawesome/free-regular-svg-icons'
 
 const faqList = (props) => {
 
-    const {faqList} = props
+    const {heading, faqList} = props
     return (
 
-
         <div className={styles.sectionWrapper}>
+            
+            <div className={styles.sectionHeaderWrapper}>
+                {heading ? <SectionHeader title={heading} /> : null}
+            </div>
+            
             <div className={styles.listWrapper}>
                 {faqList.map((item, key) => (
                     <div className={styles.faqItem} key={key}>

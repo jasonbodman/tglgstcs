@@ -3,7 +3,7 @@
     width: 100%;
     margin: 0 auto;
     display: grid;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .listWrapper {
@@ -16,6 +16,11 @@
     justify-content: center;    
 }
 
+.sectionHeaderWrapper {
+    display: grid;
+    padding-bottom: 25px;
+}
+
 
 /* TEXT SECTION */
 .textWrapper {
@@ -23,8 +28,33 @@
     padding: 25px 35px 0;
 }
 
+.textHeader {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
 .textContent {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+}
+
+/* IMAGE SECTION */
+.imageWrapper {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    height: 600px;
+    min-height: 300px;
+    max-height: 70vh;
+    margin: 0 auto;
+}   
+
+.imageContent {
+    object-fit: contain;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 /* ICON LIST */
@@ -97,16 +127,62 @@
 /* SPLIT SECTION */
 
 .splitWrapper {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 70px;
+    margin: 0 auto;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr 1fr;
     grid-gap: 50px;
+    align-content: center;
 }
 
 .leftWrapper, .rightWrapper {
     display: block;
     width: 100%;
 }
+
+.splitHeader {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.splitListItem {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+    font-size: 1.1rem;
+    padding: 5px 15px;
+    width: 100%;
+}
+
+.splitItemBullet {
+    padding-right: 15px;
+}
+
+.splitItemContent {
+    list-style: none;
+}
+
+
+.splitImageWrapper {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    height: 600px;
+    min-height: 300px;
+    max-height: 70vh;
+    margin: 0 auto;
+}   
+
+.splitImageContent {
+    object-fit: contain;
+}
+
 
 /* FAQ SECTION */
 .faqItem {
@@ -131,6 +207,32 @@
 .faqAnswer {
     font-size: 1.1rem;
     line-height: 1.7rem;
+}
+
+/* CTA BUTTON */
+.ctaIntro {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #000000;
+    padding: 0 15px 20px 15px;
+}
+.ctaButtonWrapper {
+    text-align: center;
+}
+
+.ctaButton {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    background: #009BDF;
+    color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px 30px;
+    border: none;
+}
+
+.whiteArrow {
+    color: #ffffff;
+    font-size: 1.4rem;
 }
 
 

@@ -6,6 +6,7 @@ import styles from '../styles/navbar.module.css'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faSquarePlus } from "@fortawesome/free-solid-svg-icons";
+import { urlFor } from '../lib/imageBuilder';
 
 const Navbar = ({logo, navigation}) => {
     const [menuVis, setMenuVis] = React.useState('none');
@@ -16,13 +17,13 @@ const Navbar = ({logo, navigation}) => {
     function mouseLeave() {
         setMenuVis('none')
     }
-    
+
     return (
         
         <nav className={styles.fullNav}>
             <div className={styles.logo}>
                 <Link href="/">
-                    <Image className={styles.navLogo} src={logo} width={150} height={60} />
+                    <Image className={styles.navLogo} src={urlFor(logo).url()} width={150} height={60} alt={logo.alt} priority={true}/>
                 </Link>
             </div>
 

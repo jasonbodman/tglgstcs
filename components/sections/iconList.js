@@ -2,11 +2,16 @@ import styles from '../../styles/sections.module.css'
 
 const iconList = (props) => {
 
-    const {list} = props
+    const {heading, list} = props
     return (
 
 
         <div className={styles.sectionWrapper}>
+
+            <div className={styles.sectionHeaderWrapper}>
+                {heading ? <SectionHeader title={heading} /> : null}
+            </div>
+
             <div className={styles.listWrapper}>
                 {list.map((item, key) => (
                 <div className={styles.iconListItem} key={key}>

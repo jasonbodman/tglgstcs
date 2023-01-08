@@ -3,11 +3,7 @@ import Link from "next/link"
 
 import client from "../../client"
 import {siteSettingsQuery} from '../../lib/siteSettings'
-import imageUrlBuilder from '@sanity/image-url'
-const builder = imageUrlBuilder(client)
-function urlFor(source) {
-  return builder.image(source)
-}
+import {urlFor} from '../../lib/imageBuilder'
 
 import Layout from '../../components/layout'
 import PageHero from "../../components/pageHero"

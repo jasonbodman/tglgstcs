@@ -14,17 +14,14 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import client from "../client"
 import {siteSettingsQuery} from '../lib/siteSettings'
-import imageUrlBuilder from '@sanity/image-url'
-const builder = imageUrlBuilder(client)
-function urlFor(source) {
-  return builder.image(source)
-}
+
+import {urlFor} from '../lib/imageBuilder'
 
 export default function Home(props) {
 
   return (
     <>
-    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo.asset.url} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
+    <Layout title={props.siteSettings.title} logo={props.siteSettings.logo} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
       <Hero />
 
       <div className={globals.bodyWrapper}>
