@@ -94,7 +94,7 @@ export default function About(props) {
       </div>
     </div>
 
-    {props.contactForm == true ? (<ContactForm />): (null)}
+    {props.contactForm == true ? (<ContactForm intro={props.siteSettings.contactFormIntro}/>): (null)}
 
     </Layout>
 

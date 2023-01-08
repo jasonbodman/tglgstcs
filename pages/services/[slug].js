@@ -70,7 +70,7 @@ const Service = (props) => {
       
       <RenderSections sections={props.servicePage.content}/>
 
-      {props.servicePage.contactForm == true ? (<ContactForm />): (null)}
+      {props.servicePage.contactForm == true ? (<ContactForm intro={props.siteSettings.contactFormIntro}/>): (null)}
 
     </Layout>
 

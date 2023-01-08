@@ -18,7 +18,6 @@ import {siteSettingsQuery} from '../lib/siteSettings'
 import {urlFor} from '../lib/imageBuilder'
 
 export default function Home(props) {
-
   return (
     <>
     <Layout title={props.siteSettings.title} logo={props.siteSettings.logo} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
@@ -111,7 +110,7 @@ export default function Home(props) {
           </div>      
         </div>
       
-        {props.contactForm == true ? (<ContactForm />): (null)}
+        {props.contactForm == true ? (<ContactForm intro={props.siteSettings.contactFormIntro}/>): (null)}
         
 
       </div>

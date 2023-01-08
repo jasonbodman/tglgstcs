@@ -6,12 +6,14 @@ import SectionHeader from './sectionHeader'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const contactForm = () => {
+const contactForm = ({intro}) => {
+  console.log(intro)
     return (
       <div className={globals.sectionWrapper} id='contact'>
         <SectionHeader title={"Let's Chat"} />
         <div className={globals.contentWrapper}>
-          <p className={globals.sectionIntro}>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          { intro ? <p className={globals.sectionIntro}>{intro}</p> : <p className={globals.sectionIntro} />}
+          
           <div className={styles.formWrapper}>
             <form>
               <div className={styles.inputWrapper}>

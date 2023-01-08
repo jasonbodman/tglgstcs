@@ -44,7 +44,7 @@ export default function Services(props) {
           
         </div>
 
-        {props.contactForm == true ? (<ContactForm />): (null)}
+        {props.contactForm == true ? (<ContactForm intro={props.siteSettings.contactFormIntro}/>): (null)}
 
       </Layout>
     </>
