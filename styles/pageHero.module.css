@@ -64,3 +64,28 @@
     }
     
 }
+
+@media only screen and (max-width: 800px) {
+    .pageTagline {
+        font-size: 2.5rem;
+        line-height: 2.9rem;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .pageTagline {
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+    }
+}
+
+@media only screen and (max-height: 625px) {
+    .pageTagline {
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+    }
+
+    .heroWrapper {
+        height: 60vh;
+    }
+}
