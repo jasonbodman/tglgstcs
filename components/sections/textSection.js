@@ -1,8 +1,10 @@
 import {PortableText} from '@portabletext/react'
 
 import SectionHeader from "../sectionHeader"
-
 import styles from '../../styles/sections.module.css'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 const components = {
     block: {

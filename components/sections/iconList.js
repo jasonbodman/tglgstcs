@@ -1,3 +1,4 @@
+import SectionHeader from '../../components/sectionHeader'
 import styles from '../../styles/sections.module.css'
 
 const iconList = (props) => {
