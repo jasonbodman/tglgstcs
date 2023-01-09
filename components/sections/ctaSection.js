@@ -11,14 +11,15 @@ const ctaSection = (props) => {
 
     return (
         <div className={styles.sectionWrapper}>
+            <div className={styles.ctaWrapper}>
+                {ctaIntro ? <p className={styles.ctaIntro}>{ctaIntro}</p> : null}
 
-            {ctaIntro ? <p className={styles.ctaIntro}>{ctaIntro}</p> : null}
-
-            <Link href={ctaURL}>
-                <div className={styles.ctaButtonWrapper}>
-                    <button className={styles.ctaButton} type="submit">{ctaText} <FontAwesomeIcon className={styles.whiteLinkArrow} icon={faArrowRight}/></button>
-                </div>
-            </Link>
+                <Link href={ctaURL}>
+                    <div className={styles.ctaButtonWrapper}>
+                        <button className={styles.ctaButton} type="submit">{ctaText} <FontAwesomeIcon className={styles.whiteLinkArrow} icon={faArrowRight}/></button>
+                    </div>
+                </Link>
+            </div>
         </div>
 
     )

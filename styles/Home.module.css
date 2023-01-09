@@ -229,6 +229,14 @@ img.heroLogo {
     .homeServiceListItem {
         grid-column: 1 / -1;
     }
+
+    .homeServiceListItemFull .homeServiceItemTitle {
+        font-size: 1.7rem;
+    }
+
+    .homeServiceItemDescription {
+        font-size: 1.1rem;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -259,7 +267,8 @@ img.heroLogo {
         padding-right: 35px;
     }
 
-    .homeServiceItemDescription {
-        font-size: 1.1rem;
+    .homeAboutDescription, .homeServiceListItemFull .homeServiceItemDescription, .homeServiceItemDescription {
+        font-size: 1.3rem;
     }
+    
 }

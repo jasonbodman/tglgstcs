@@ -139,8 +139,9 @@
 }
 
 .leftWrapper, .rightWrapper {
-    display: block;
+    display: grid;
     width: 100%;
+    align-items: center;
 }
 
 .splitHeader {
@@ -149,6 +150,11 @@
     font-weight: bold;
     padding-top: 15px;
     padding-bottom: 5px;
+}
+
+.splitContentList {
+    margin: 0;
+    padding-bottom:15px;
 }
 
 .splitListItem {
@@ -173,9 +179,9 @@
     width: 100%;
     max-width: 800px;
     position: relative;
-    height: 600px;
+    height: 100vw;
     min-height: 300px;
-    max-height: 70vh;
+    max-height: 500px;
     margin: 0 auto;
 }   
 
@@ -210,6 +216,10 @@
 }
 
 /* CTA BUTTON */
+.ctaWrapper {
+    padding: 0 70px;
+}
+
 .ctaIntro {
     font-size: 1.5rem;
     text-align: center;
@@ -237,18 +247,37 @@
 
 
 /* MOBILE QUERIES */
+@media only screen and (max-width: 1200px) {
+    .splitWrapper {
+        grid-auto-flow: row;
+    }
+
+    .rightWrapper {
+        grid-row-start: -1;
+    }
+
+}
+
 @media only screen and (max-width: 650px) {
     .sectionWrapper {
         padding-bottom: 60px;
     }
     
-    .valpropWrapper, .listWrapper {
+    .valpropWrapper, .listWrapper, .splitWrapper, .ctaWrapper {
         padding: 0 35px;
     }
 
     .iconListItem {
         min-width: 150px;
         max-width: 150px;
+    }
+
+    .splitContentList {
+        padding-left: 5px;
+    }
+
+    .faqAnswer, .splitListItem {
+        font-size: 1.3rem;
     }
 }
 

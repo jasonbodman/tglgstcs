@@ -75,3 +75,9 @@ a.servicesItemLink {
         padding: 0 0 100px;
     }
 }
+
+@media only screen and (max-width: 650px) {
+    .servicesItemDescription, a.servicesItemLink {
+        font-size: 1.3rem;
+    }
+}
