@@ -14,7 +14,7 @@ const contactForm = ({intro}) => {
           { intro ? <p className={globals.sectionIntro}>{intro}</p> : <p className={globals.sectionIntro} />}
           
           <div className={styles.formWrapper}>
-            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" netlify>
+            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/about" netlify>
               <div hidden>
                 <label>
                   Don’t fill this out if you’re human: <input name="bot-field" />
@@ -23,15 +23,15 @@ const contactForm = ({intro}) => {
               <input type="hidden" name="form-name" value="contact" />
               
               <div className={styles.inputWrapper}>
-                <label hidden>Name</label><input className={styles.formInput} type="text" name="name" placeholder="Name*"/>
+                <label hidden>Name</label><input className={styles.formInput} type="text" name="name" placeholder="Name*" required/>
               </div>
               
               <div className={styles.inputWrapper}>
-                <label hidden>Email Address</label><input className={styles.formInput} type="text" name="email" placeholder="Email Address*"/>
+                <label hidden>Email Address</label><input className={styles.formInput} type="text" name="email" placeholder="Email Address*" required/>
               </div>
 
               <div className={styles.inputWrapper}>
-                <label hidden>Phone Number</label><input className={styles.formInput} type="text" name="phone" placeholder="Phone Number*"/>
+                <label hidden>Phone Number</label><input className={styles.formInput} type="text" name="phone" placeholder="Phone Number*" required/>
               </div>
 
               <div className={styles.inputWrapper}>
