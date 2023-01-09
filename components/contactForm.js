@@ -14,7 +14,12 @@ const contactForm = ({intro}) => {
           { intro ? <p className={globals.sectionIntro}>{intro}</p> : <p className={globals.sectionIntro} />}
           
           <div className={styles.formWrapper}>
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+              <div hidden>
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </div>
               <div className={styles.inputWrapper}>
                 <label hidden>Name</label><input className={styles.formInput} type="text" name="name" placeholder="Name*"/>
               </div>
