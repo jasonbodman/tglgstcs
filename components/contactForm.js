@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const contactForm = ({intro}) => {
-  console.log(intro)
     return (
       <div className={globals.sectionWrapper} id='contact'>
         <SectionHeader title={"Let's Chat"} />

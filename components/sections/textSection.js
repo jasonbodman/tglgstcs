@@ -12,27 +12,6 @@ const components = {
             <h1 className={styles.textHeader}>{children}</h1>
             ),            
         normal: ({children}) => <p className={styles.textContent}>{children}</p>
-    },
-    list: {
-        bullet: ({children}) => (
-            <div>
-                <ul className={styles.splitContentList}>
-                {children.map((item, key) => (
-                <div className={styles.splitListItem} key={key}>
-                    <div className={styles.splitItemBullet}>
-                <FontAwesomeIcon icon={faSquareCaretRight} style={{color: '#009BDF'}}/>
-                </div>
-
-                <div className={styles.splitItemContent}>
-                {item}
-                </div>
-
-                </div>
-                ))}
-                </ul>
-            </div>
-            
-        ),
     }
 }
 

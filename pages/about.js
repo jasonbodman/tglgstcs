@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from 'next/link'
+import {PortableText} from '@portabletext/react'
 
 import {phoneNumberBuilder} from '../lib/phoneNumber'
 import SectionHeader from '../components/sectionHeader'
@@ -10,7 +11,7 @@ import styles from '../styles/aboutPage.module.css'
 import globals from '../styles/globals.module.css'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone, faSquareCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 import client from "../client"
 import Layout from '../components/layout'
@@ -19,21 +20,34 @@ import {siteSettingsQuery} from '../lib/siteSettings'
 import {urlFor} from '../lib/imageBuilder'
 
 
-function toPlainText(blocks = []) {
-  return blocks
-    // loop through each block
-    .map(block => {
-      // if it's not a text block with children, 
-      // return nothing
-      if (block._type !== 'block' || !block.children) {
-        return ''
-      }
-      // loop through the children spans, and join the
-      // text strings
-      return block.children.map(child => child.text).join("</p><p>")
-    })
-    // join the paragraphs leaving split by two linebreaks
-    .join('\n\n')
+const components = {
+  block: {
+      heading: ({children}) => (
+          <h1 className={styles.historyHeader}>{children}</h1>
+          ),            
+      normal: ({children}) => <p className={styles.historyTextContent}>{children}</p>
+  },
+  list: {
+      bullet: ({children}) => (
+          <div>
+              <ul className={styles.historyContentList}>
+              {children.map((item, key) => (
+              <div className={styles.historyListItem} key={key}>
+                  <div className={styles.historyItemBullet}>
+              <FontAwesomeIcon icon={faSquareCaretRight} style={{color: '#009BDF'}}/>
+              </div>
+
+              <div className={styles.historyItemContent}>
+              {item}
+              </div>
+
+              </div>
+              ))}
+              </ul>
+          </div>
+          
+      ),
+  }
 }
 
 export default function About(props) {
@@ -87,9 +101,10 @@ export default function About(props) {
 
         <div className={styles.historyText}>
 
-          {props.historyContent.map((item, key) => (
+          <PortableText value={props.historyContent} components={components} />
+          {/* {props.historyContent.map((item, key) => (
             <p key={key} className={styles.historyParagraph}>{item.children[0].text}</p>
-          ))}        
+          ))}         */}
         </div>          
       </div>
     </div>

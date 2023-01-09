@@ -116,9 +116,21 @@
     padding: 50px 70px 100px;
 }
 
+.historyHeader {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
 .historyText {
-    font-size: 1.1rem;
     width: 100%;
+}
+
+.historyTextContent {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
 }
 
 .historyParagraph {
