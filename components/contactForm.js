@@ -27,7 +27,7 @@ const contactForm = ({intro}) => {
               </div>
               
               <div className={styles.inputWrapper}>
-                <label hidden>Email Address</label><input className={styles.formInput} type="text" name="email" placeholder="Email Address*" required/>
+                <label hidden>Email Address</label><input className={styles.formInput} type="email" name="email" placeholder="Email Address*" required/>
               </div>
 
               <div className={styles.inputWrapper}>

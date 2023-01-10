@@ -3,10 +3,11 @@ import styles from '../styles/pageHero.module.css'
 import {urlFor} from '../lib/imageBuilder'
 
 
-const pageHero = ({ hero, title, tagline, content }) => {
+const pageHero = ({ hero, title, tagline }) => {
     return (
       <div className={styles.wrapper}>
-        <div className={styles.heroWrapper} style={{backgroundImage: `url('${urlFor(hero).width(1000)}')`,}}>
+        <div className={styles.heroWrapper} >
+        <div className={styles.heroWrapperImage} style={{backgroundImage: `url('${urlFor(hero).url()}')`,}}/>
           <div className={styles.heroBg}>
             <div className={styles.heroLeft}>
               <div>

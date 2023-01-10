@@ -6,12 +6,20 @@
     width: 100%;
     height: 50vh;
     max-height: 600px;
+    position: relative;
+    display: grid;
+}
+
+.heroWrapperImage {
+    width: 60%;
+    justify-self: end;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative;
-    display: grid;
-    padding: 50px 100px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
 }
 
 .heroBg {
@@ -49,8 +57,6 @@
     font-size: 3.3rem;
     line-height: 3.75rem;
     color: #FFFFFF;
-
-
 }
 
 .heroHeadlineBlue {
@@ -62,6 +68,11 @@
     .heroWrapper {
         height: 40vh;
     }
+
+    .pageTagline {
+        font-size: 3rem;
+        line-height: 3.4rem;
+    }
     
 }
 
@@ -69,13 +80,6 @@
     .pageTagline {
         font-size: 2.5rem;
         line-height: 2.9rem;
-    }
-}
-
-@media only screen and (max-width: 625px) {
-    .pageTagline {
-        font-size: 1.5rem;
-        line-height: 1.9rem;
     }
 }
 

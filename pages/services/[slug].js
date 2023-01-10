@@ -62,11 +62,13 @@ const Service = (props) => {
       
       <PageHero hero={props.servicePage.image} title={props.servicePage.title} tagline={props.servicePage.tagline} />
 
-      {props.servicePage.description ? 
-        <div className={styles.overviewWrapper}>
-          <p className={styles.pageOverview}>{props.servicePage.description}</p>
-        </div>
-      : null }
+      <div className={styles.overviewWrapper}>
+        {props.servicePage.description ? 
+          <div className={styles.overviewInnerWrapper}>
+            <p className={styles.pageOverview}>{props.servicePage.description}</p>
+          </div>
+        : null }
+      </div>
       
       <RenderSections sections={props.servicePage.content}/>
 
