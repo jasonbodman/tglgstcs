@@ -145,23 +145,24 @@
 }
 
 .splitHeader {
+    font-family: 'Avant Garde', sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    font-weight: bold;
+    font-weight: 700;
     padding-top: 15px;
     padding-bottom: 5px;
 }
 
 .splitContentList {
     margin: 0;
-    padding-bottom:15px;
+    padding: 0 0 15px;
 }
 
 .splitListItem {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: auto 1fr;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding: 5px 15px;
     width: 100%;
 }

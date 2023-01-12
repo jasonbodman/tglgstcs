@@ -75,7 +75,7 @@ export default function About(props) {
           {bioList.map((item, key) => (
             <div className={styles.bioItem} key={key}>
               <div className={styles.bioPhoto}>
-                <img src={urlFor(item.personPhoto).size(300,300).url()} alt={props.personName}/>
+                <img src={urlFor(item.personPhoto).size(300,400).url()} alt={props.personName}/>
               </div>
 
               <div className={styles.bioContent}>
