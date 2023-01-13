@@ -247,6 +247,49 @@
     font-size: 1.4rem;
 }
 
+/* PARTNER LIST */
+.partnerFullImage {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.partnerFullImageWrapper {
+    width: 500px;
+    height: 200px;
+    position: relative;
+}
+
+.partnerFullImageContent {
+    object-fit: contain;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.subtextWrapper {
+    margin: 0 auto;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 0 50px 20px;
+}
+
+.partnerImageWrapper {
+    width: 300px;
+    height: 100px;
+    position: relative;
+    margin: 0 20px;
+}
+
+.partnerImage {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    margin: 0 auto;
+}
 
 /* MOBILE QUERIES */
 @media only screen and (max-width: 1200px) {
