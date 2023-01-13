@@ -28,6 +28,13 @@
     }
 
     .pageOverview {
-        padding: 50px 35px;
+        padding: 35px 35px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .pageOverview {
+        font-size: 1.7rem;
+        line-height: 2.1rem;
     }
 }
