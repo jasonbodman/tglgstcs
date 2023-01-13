@@ -13,7 +13,6 @@
 
 .heroBgImage {
     object-fit: cover;
-    object-position: left;
     z-index: 0;
 }
 
