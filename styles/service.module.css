@@ -22,6 +22,11 @@
 }
 
 @media only screen and (max-width: 650px) {
+    .overviewWrapper {
+        padding: 30px 25px 30px;
+
+    }
+
     .pageOverview {
         padding: 50px 35px;
     }
