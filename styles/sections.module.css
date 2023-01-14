@@ -248,6 +248,10 @@
 }
 
 /* PARTNER LIST */
+.partnerListWrapper {
+    padding: 30px 20px 0;
+}
+
 .partnerFullImage {
     width: 100%;
     display: grid;
@@ -255,8 +259,10 @@
 }
 
 .partnerFullImageWrapper {
-    width: 500px;
-    height: 200px;
+    width: 80vw;
+    max-width: 500px;
+    height: 100vw;
+    max-height: 200px;
     position: relative;
 }
 
@@ -278,8 +284,10 @@
 }
 
 .partnerImageWrapper {
-    width: 300px;
-    height: 100px;
+    width: 60vw;
+    max-width: 300px;
+    height: 25vw;
+    max-height: 100px;
     position: relative;
     margin: 0 20px;
 }

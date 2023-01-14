@@ -84,6 +84,10 @@
 }
 
 @media only screen and (max-height: 625px) {
+    .heroLeft {
+        padding-left: 25px;
+    }
+    
     .pageTagline {
         font-size: 1.5rem;
         line-height: 1.9rem;
