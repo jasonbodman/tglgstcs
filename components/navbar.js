@@ -18,6 +18,11 @@ const Navbar = ({logo, navigation}) => {
         setMenuVis('none')
     }
 
+    function closeMenu() {
+        mousLeave()
+        document.getElementById("menuToggle").checked = false;
+    }
+
     return (
         
         <nav className={styles.fullNav}>
@@ -29,7 +34,7 @@ const Navbar = ({logo, navigation}) => {
 
             <div className={styles.navMenu}>
                 <div id={styles.menuToggle}>
-                    <input type="checkbox" />
+                    <input type="checkbox" id="menuToggle" />
                     <span></span>
                     <span></span>
                     <span></span>
@@ -40,13 +45,13 @@ const Navbar = ({logo, navigation}) => {
                                 Our Team
                             </Link>
                         </li>
-                        <li className={styles.navItemParent} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={mouseLeave}>
+                        <li className={styles.navItemParent} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={closeMenu}>
                             <FontAwesomeIcon className={styles.bluePlus} icon={faSquarePlus} /><Link href="/services">Services</Link>&nbsp;<FontAwesomeIcon className={styles.blueArrow} icon={faCaretDown} />
-                                <div className={styles.dropdown} style={{display: `${menuVis ? menuVis : 'none' }`}} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={mouseLeave}>
+                                <div className={styles.dropdown} style={{display: `${menuVis ? menuVis : 'none' }`}} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={closeMenu}>
                                     <ul className={styles.navItemChildList}>
                                     {navigation.map((item, key) => (
                                         <li className={styles.navItemChild} key={key}>
-                                            <Link href={`/services/${item.slug.current}`} onClick={mouseLeave}>
+                                            <Link href={`/services/${item.slug.current}`} onClick={closeMenu}>
                                                 <p style={{whiteSpace: 'nowrap',}}>{item.title}</p>
                                             </Link>
                                         </li>
