@@ -40,13 +40,13 @@ const Navbar = ({logo, navigation}) => {
                                 Our Team
                             </Link>
                         </li>
-                        <li className={styles.navItemParent} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+                        <li className={styles.navItemParent} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={mouseLeave}>
                             <FontAwesomeIcon className={styles.bluePlus} icon={faSquarePlus} /><Link href="/services">Services</Link>&nbsp;<FontAwesomeIcon className={styles.blueArrow} icon={faCaretDown} />
-                                <div className={styles.dropdown} style={{display: `${menuVis ? menuVis : 'none' }`}} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+                                <div className={styles.dropdown} style={{display: `${menuVis ? menuVis : 'none' }`}} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onClick={mouseLeave}>
                                     <ul className={styles.navItemChildList}>
                                     {navigation.map((item, key) => (
                                         <li className={styles.navItemChild} key={key}>
-                                            <Link href={`/services/${item.slug.current}`}>
+                                            <Link href={`/services/${item.slug.current}`} onClick={mouseLeave}>
                                                 <p style={{whiteSpace: 'nowrap',}}>{item.title}</p>
                                             </Link>
                                         </li>
