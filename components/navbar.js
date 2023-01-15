@@ -19,7 +19,7 @@ const Navbar = ({logo, navigation}) => {
     }
 
     function closeMenu() {
-        mousLeave()
+        mouseLeave()
         document.getElementById("menuToggle").checked = false;
     }
 

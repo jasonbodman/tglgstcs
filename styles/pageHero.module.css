@@ -83,11 +83,14 @@
     }
 }
 
-@media only screen and (max-height: 625px) {
+@media only screen and (max-width: 550px) {
     .heroLeft {
         padding-left: 25px;
     }
-    
+}
+
+/* NOTE: MAX HEIGHT */
+@media only screen and (max-height: 625px) {  
     .pageTagline {
         font-size: 1.5rem;
         line-height: 1.9rem;
