@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react'
 
-export default function chat() {
+export default function Chat() {
     const tawkMessengerRef = useRef()
   
     const handleMinimize = () => {
