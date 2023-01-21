@@ -8,13 +8,16 @@ export default function Chat() {
       tawkMessengerRef.current.minimize()
     }
     
+    const propertyID = process.env.NEXT_PUBLIC_TAWK_PROPERTY_ID
+    const widgetID = process.env.NEXT_PUBLIC_TAWK_WIDGET_ID
+
     return (
       <>  
         <button onClick={handleMinimize}> Minimize the Chat </button>
   
         <TawkMessengerReact
-            propertyId="63c7598a47425128790e4088"
-            widgetId="1gn1bbhel"
+            propertyId = {propertyID}
+            widgetId = {widgetID}
             ref={tawkMessengerRef}/>
       </>
     )
