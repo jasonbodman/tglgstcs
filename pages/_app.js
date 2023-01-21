@@ -1,6 +1,9 @@
 //  import global  css
 import "../styles/globals.css";
 
+// import google analytics
+import GTag from '../components/gtag'
+
 // import chat widget
 import Chat from '../components/chat'
 
@@ -13,6 +16,8 @@ config.autoAddCss = false
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
+      <GTag />
+      
       <Component {...pageProps} />
 
       <Chat />
