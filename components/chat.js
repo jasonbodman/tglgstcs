@@ -4,7 +4,8 @@ import TawkMessengerReact from '@tawk.to/tawk-messenger-react'
 export default function Chat() {
     const tawkMessengerRef = useRef()
   
-    const handleMinimize = () => {
+    const onLoad = () => {
+
       tawkMessengerRef.current.minimize()
     }
     
@@ -12,14 +13,15 @@ export default function Chat() {
     const widgetID = process.env.NEXT_PUBLIC_TAWK_WIDGET_ID
 
     return (
-      <>  
-        <button onClick={handleMinimize}> Minimize the Chat </button>
-  
+      <>    
         <TawkMessengerReact
+            onLoad = {onLoad}
             propertyId = {propertyID}
             widgetId = {widgetID}
             ref={tawkMessengerRef}/>
       </>
     )
   }
+  
+
   
