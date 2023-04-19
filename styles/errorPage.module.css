@@ -1,0 +1,35 @@
+.errorIntroWrapper {
+    background-color: #000000;
+    height: 80vh;
+    display: grid;
+    align-content: center;
+}
+
+.errorTitle {
+    font-family: 'Avant Garde', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #009BDF;
+    text-align: center;
+}
+
+.errorIntro {
+    font-size: 1.3rem;
+    padding: 20px 0 50px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.infoButton {
+    background-color: #009BDF;
+    color: #ffffff;
+    padding: 20px 50px;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+}
