@@ -8,7 +8,7 @@ import {urlFor} from '../lib/imageBuilder'
 
 const affiliationList = (props) => {
     const {heading, intro, images} = props
-
+    
     return (
         <div className={styles.sectionWrapper}>
             
@@ -20,7 +20,7 @@ const affiliationList = (props) => {
                 <p className={globals.sectionIntro}>{intro}</p>
 
                 <div className={styles.affiliationListWrapper}>                
-
+            
                         {images.map(({ image, key }) => (
                             <div key={key} className={styles.affiliationImageWrapper}>
                                 <Image className={styles.affiliationImage} src={urlFor(image).width(300).url()} alt={image.altText} fill/>

@@ -19,6 +19,7 @@ import {siteSettingsQuery} from '../lib/siteSettings'
 import {urlFor} from '../lib/imageBuilder'
 
 export default function Home(props) {
+
   return (
     <>
     <Layout title={props.siteSettings.title} logo={props.siteSettings.logo} navigation={props.siteSettings.mainNavigation} phone={props.siteSettings.footerPhone} email={props.siteSettings.footerEmail} mail={props.siteSettings.footerMail} footerText={props.siteSettings.footerText}>
@@ -62,7 +63,10 @@ export default function Home(props) {
         <div className={styles.homeServiceSection}>
           <SectionHeader title={props.servicesTitle} />
           <div className={globals.contentWrapper}>
-            <p className={globals.sectionIntro}>{props.servicesIntro}</p>
+
+          {props.servicesIntro == true ? (<p className={globals.sectionIntro}>{props.servicesIntro}</p>): (<div style={{paddingTop: "20px"}} />)}
+
+            
           </div>
 
           <div className={styles.homeServiceListWrapper}>
