@@ -4,6 +4,7 @@ import Link from "next/link"
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import SectionHeader from '../components/sectionHeader'
+import AffiliationList from '../components/affiliationList'
 import ContactForm from '../components/contactForm'
 
 import styles from '../styles/Home.module.css'
@@ -109,6 +110,10 @@ export default function Home(props) {
             </div>    
           </div>      
         </div>
+
+        <div className={styles.affiliationSection}>
+          <AffiliationList heading={props.affiliationTitle} intro={props.affiliationIntro} images={props.affiliationList}/>
+        </div>
       
         {props.contactForm == true ? (<ContactForm intro={props.siteSettings.contactFormIntro}/>): (null)}
         
@@ -169,6 +174,9 @@ export async function getStaticProps() {
           slug
         },
       },
+      affiliationTitle,
+      affiliationIntro,
+      affiliationList,
       contactForm,
     }[0]
     `
@@ -183,6 +191,9 @@ export async function getStaticProps() {
   const servicesTitle = qresult.servicesTitle
   const servicesIntro = qresult.servicesIntro
   const servicesList = qresult.servicesList
+  const affiliationTitle = qresult.affiliationTitle
+  const affiliationIntro = qresult.affiliationIntro
+  const affiliationList = qresult.affiliationList.content
   const contactForm = qresult.contactForm
 
   return {
@@ -195,6 +206,9 @@ export async function getStaticProps() {
       servicesTitle,
       servicesIntro,
       servicesList,
+      affiliationTitle,
+      affiliationIntro,
+      affiliationList,
       contactForm
     }
   }
