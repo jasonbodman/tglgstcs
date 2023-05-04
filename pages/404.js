@@ -20,7 +20,7 @@ export default function ThankYou(props) {
         <div className={globals.contentWrapper}>
           <FontAwesomeIcon icon={faCircleExclamation} style={{color: '#009BDF', fontSize: '2.5rem', textAlign: 'center', width: '100%', paddingBottom: '5px'}}/>
           <p className={styles.errorTitle}>Whoops...</p>
-          <p className={styles.errorIntro}>Looks like you ended up at a destination that doesn't exist!
+          <p className={styles.errorIntro}>Looks like you ended up at a destination that doesn&apos;t exist!
           
           <br />Head back <Link href="/">home</Link> or shoot us a message at <Link href="mailto:contactus@harnesstogo.com">contactus@harnesstogo.com</Link> if you keep running into this error!</p>
 
