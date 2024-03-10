@@ -31,6 +31,14 @@
     max-width: 500px;
 }
 
+.heroTextContent {
+    font-family: 'Avant Garde', sans-serif;
+    color: #009BDF;
+    text-transform: uppercase;
+    font-size: 3.3rem;
+    font-weight: 900;
+}
+
 img.heroLogo {
     object-fit: contain;
     width: 100% !important;

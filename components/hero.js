@@ -13,7 +13,7 @@ const Hero = () => {
 />
         <div className={styles.heroRight}>
           <div className={styles.heroLogoContainer}>
-            <Image className={styles.heroLogo} src="/images/TOGOLOGISTICS.png" fill />
+            <h1 className={styles.heroTextContent}>A Supply Chain Resource Group</h1>
           </div>
         </div>
       </div>

@@ -16,6 +16,10 @@
     justify-self: start;
 }
 
+.footerLogo {
+    object-fit: contain;
+}
+
 .footerRight {
     justify-self: end;
     display: grid;

@@ -18,6 +18,7 @@
 }
 
 .navLogo {
+    object-fit: contain;
 }
 
 .navMenu {
